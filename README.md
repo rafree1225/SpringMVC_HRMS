@@ -1,4 +1,4 @@
-請切換到main分支查看
+請切換到master分支查看
 
 # SpringMVC_HRMS
 以SpringMVC概念實作一個簡易的員工人資管理系統，模擬人力資源人員使用公司內部的系統，
