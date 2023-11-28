@@ -107,7 +107,21 @@ public class EmpController {
     }
 
     @PutMapping(value = {"/"})
-    public String update(@ModelAttribute("emp") Employee emp) {
+    public String update(@ModelAttribute("emp") Employee emp,
+            @RequestParam Optional<int[]> clubIds) {
+
+        // 清除舊的社團關聯
+        emp.getClubs().clear();
+
+        // 根據提交的社團ID添加新的社團關聯
+        if (clubIds.isPresent()) {
+            for (Integer id : clubIds.get()) {
+                Club club = dao.getClub(id);
+                emp.getClubs().add(club);
+            }
+        }
+
+        // 更新員工資訊
         dao.updateEmp(emp);
         return "redirect: ./";
     }
@@ -117,6 +131,5 @@ public class EmpController {
         dao.deleteEmp(emp.getId());
         return "redirect: ./";
     }
-
 
 }

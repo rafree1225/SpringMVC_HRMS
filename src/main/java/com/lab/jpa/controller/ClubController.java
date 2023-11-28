@@ -90,7 +90,7 @@ public class ClubController {
     
     @DeleteMapping(value = {"/"})
     public String delete(@ModelAttribute("club") Club club) {
-        dao.deleteDept(club.getId());
+        dao.deleteClub(club.getId());
         return "redirect: ./";
     }
 }

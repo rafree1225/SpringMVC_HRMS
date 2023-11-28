@@ -30,7 +30,7 @@
                                    method="post" 
                                    action="${pageContext.request.contextPath}/mvc/emp/" >
                             <fieldset>
-                                <legend>員工表單 ─新增</legend>
+                                <legend>員工表單 ─ 新增、修改、刪除</legend>
                                 員工序號：<br/>
                                 <form:input path="id" readonly="true" /><p />
                                 員工姓名：<br/>
@@ -39,6 +39,8 @@
                                 員工薪資：<br/>
                                 <form:input path="salary.money" placeholder="請輸入薪資" /><p />
                                 <form:errors path="salary.money" style="color:red" /><p />
+                                操作狀態：<br/>
+                                <input type="text" id="_method" name="_method" readonly="true" value="${ _method }" /><p />
                                 員工部門：<br/>
                                 <form:select path="department.id">
                                     <form:option value="0" label="請選擇部門" />
@@ -79,7 +81,8 @@
                                             <th>部門</th>
                                             <th>薪資</th>
                                             <th>社團</th>
-                                   
+                                            <th>修改</th>
+                                            <th>刪除</th>
                                         </tr>
                                     </thead>
 
@@ -89,12 +92,16 @@
                                                 <td>${ emp.id }</td>
                                                 <td>${ emp.name }</td>
                                                 <td>${ emp.department.name }</td>
-                                                <td>${ emp.salary.money }</td>
+                                                <td>
+                                                    <fmt:formatNumber type="number" pattern="###,###" value="${ emp.salary.money }" />
+                                                </td>
                                                 <td>
                                                     <c:forEach var="club" items="${ emp.clubs }">
                                                         ${ club.name }
                                                     </c:forEach>    
                                                 </td>
+                                                <td><a href="${pageContext.request.contextPath}/mvc/emp/${ emp.id }">修改</a></td>
+                                                <td><a href="${pageContext.request.contextPath}/mvc/emp/delete/${ emp.id }">刪除</a></td>
                                             </tr>
                                         </c:forEach>
                                     </tbody>
