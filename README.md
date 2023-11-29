@@ -4,18 +4,23 @@
 系統各頁面截圖：
 ![首頁](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/c34d8061-6486-4fcc-8878-3d237264d056)
 
-![部門](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/4b5784fe-cf29-4ca8-aa0b-247ae2f1b586)
 
-![社團](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/04e917a5-7e86-47fe-bede-85bb085d486a)
+![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/6e6394da-d342-4dd1-bf82-38280623b981)
 
-![員工](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/ee428db2-f908-4e67-bc68-beb6448ded47)
+
+![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/e09620b9-1123-47a9-bde0-97f1138d0ec9)
+
+
+![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/ab283894-09aa-4fb4-a3b2-2714661d25b4)
+
 
 
 ***********************************************************************************************************
 
 資料表關係圖：
 
-![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/c4a202ea-c2fa-4476-ad8c-4adfd4cf1ae3)
+
+<img width="1760" alt="SpringMVC_HRMS" src="https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/cd7ef623-2acc-41ad-b977-9540e9e11669">
 
 
 ***********************************************************************************************************
@@ -30,16 +35,25 @@
 
 在首頁：可以知道各頁面之功能，並前往。
 
+
 在部門頁面：可以個別設定公司部門的類別，
+
 並可以在該頁面新增、修改、刪除部門類別。
+
 另外也可以直接查看各個部門共有多少員工加入，與其圓餅圖。
 
+
 在社團頁面：可以個別設定公司社團的類別，
+
 並可以在該頁面新增、修改、刪除社團類別。
+
 另外也可以直接查看各個社團共有多少員工參加，與其直條圖。
 
+
 在員工頁面：可以個別設定每位員工的資料，
+
 包括姓名、薪資、部門、社團，
+
 並可以在該頁面新增、修改、刪除員工個人資料。
 
 另外也可以直接查看員工的薪資圖表(折線圖)。
