@@ -1,3 +1,134 @@
-<script>
-    window.location.href='mvc/dept/';
-</script>
+<!doctype html>
+
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">    <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>    
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/side-menu.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            .report {
+                width: 120px;
+
+
+            </style>
+
+
+
+            }
+        </style>
+
+    </head>
+
+
+    <body>
+
+        <div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span>
+
+                </span>
+            </a>
+
+            <div id="menu">
+                <div class="pure-menu">
+
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item" id="deptLink">
+                            <a href="http://localhost:8080/SpringMVC_HRMS/index.html" class="pure-menu-link">首頁</a>
+                        </li>
+                        <li class="pure-menu-item" id="deptLink">
+                            <a href="http://localhost:8080/SpringMVC_HRMS/mvc/dept/" class="pure-menu-link">部門</a>
+                        </li>
+                        <li class="pure-menu-item" id="clubLink">
+                            <a href="http://localhost:8080/SpringMVC_HRMS/mvc/club/" class="pure-menu-link">社團</a>
+                        </li>
+                        <li class="pure-menu-item" id="empLink">
+                            <a href="http://localhost:8080/SpringMVC_HRMS/mvc/emp/" class="pure-menu-link">員工</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="main">
+                <div class="header">
+                    <h1> ItBroccoli 企業 </h1>
+                    <h2> 員工人資管理系統 </h2>
+                </div>
+
+                <div class="content">
+
+                    <div class="pure-g">
+                        <div class="pure-u-1-4">
+                            <img class="pure-img-responsive" src="pic/Company.jpg" alt="Company">
+                        </div>
+                        <div class="pure-u-1-4">
+                            <img class="pure-img-responsive" src="pic/Bike.jpg" alt="Bike">
+                        </div>
+                        <div class="pure-u-1-4">
+                            <img class="pure-img-responsive" src="pic/Office.jpg" alt="Office">
+                        </div>
+                        <div class="pure-u-1-4">
+                            <img class="pure-img-responsive" src="pic/HR.jpg" alt="HR">
+                        </div>
+                    </div>
+
+
+                    <div class="subhead-container">
+
+                        <div class="subhead-box">
+                            <h2 class="content-subhead">管理部門分類</h2>
+                            <hr>
+                            <p style="color:royalblue;font-size:20px">可以個別設定公司部門的類別，<br/>
+                                並可以在該頁面新增、修改、刪除部門類別。<br/>
+                                <br/>
+                                另外也可以直接查看各個部門共有多少員工加入，與其圓餅圖。
+                            </p>
+                            <br/>
+                            <button class="button-secondary pure-button" onclick="location.href = 'http://localhost:8080/SpringMVC_HRMS/mvc/dept/'">前往部門頁面</button>
+                        </div>
+
+                        <div class="subhead-box">
+                            <h2 class="content-subhead">管理社團分類</h2>
+                            <hr>
+                            <p style="color:royalblue;font-size:20px">可以個別設定公司社團的類別，<br/>
+                                並可以在該頁面新增、修改、刪除社團類別。<br/>
+                                <br/>
+                                另外也可以直接查看各個社團共有多少員工參加，與其直條圖。
+                            </p>
+                            <br/>
+                            <button class="button-secondary pure-button" onclick="location.href = 'http://localhost:8080/SpringMVC_HRMS/mvc/club/'">前往社團頁面</button>
+                        </div>
+
+                        <div class="subhead-box">
+                            <h2 class="content-subhead">管理員工資料</h2>
+                            <hr>
+                            <p style="color:royalblue;font-size:20px">可以個別設定每位員工的資料，<br/>
+                                包括姓名、薪資、部門、社團，<br/>
+                                並可以在該頁面新增、修改、刪除員工個人資料。<br/>
+                                <br/>
+                                另外也可以直接查看員工的薪資圖表(折線圖)。
+                            </p>
+                            <br/>
+                            <button class="button-secondary pure-button" onclick="location.href = 'http://localhost:8080/SpringMVC_HRMS/mvc/emp/'">前往員工頁面</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ui.js"></script>
+
+</body>
+</html>

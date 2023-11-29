@@ -17,7 +17,8 @@
 
         var options = {
             title: '薪資',
-            legend: {position: 'bottom'}
+            legend: {position: 'bottom'},
+            colors: ['#f3b49f']
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('linechart'));

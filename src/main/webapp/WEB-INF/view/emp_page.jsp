@@ -7,6 +7,31 @@
     <head>
         <!-- Head -->
         <%@include file="include/head.jspf"  %>
+
+        <style>
+            legend, 
+            .pure-table thead th {
+                font-weight: bold; /* 將字體設為粗體 */
+            }
+
+
+            .pure-form legend {
+                color: 	#000000; /* 黑色 */
+            }
+            .pure-form input {
+                color: #6C6C6C; /* 深灰色 */
+            }
+            .pure-table thead th {
+                background-color: #0072E3; /* 深藍色 */
+                color: 	#FFFFFF; /* 白色 */
+            }
+            .pure-table tbody td {
+                background-color: #FFFFFF; /* 白色 */
+                color:#000000; /* 黑色 */
+            }
+
+        </style>
+
     </head>
     <body style="padding: 10px">
 
@@ -20,7 +45,7 @@
             <div id="main">
                 <div class="header">
                     <h1>員工</h1>
-                    <h2></h2>
+                    <h2>公司員工個人資料</h2>
                 </div>
                 <table class="pure-table" style="border: none;">
                     <td valign="top">
@@ -75,6 +100,7 @@
                                 <legend>員工列表</legend>
                                 <table class="pure-table pure-table-bordered" width="100%">
                                     <thead>
+
                                         <tr>
                                             <th>序號</th>
                                             <th>姓名</th>

@@ -16,7 +16,8 @@
     ]);
 
     var options = {
-        title: '部門人數'
+        title: '部門人數',
+        colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));

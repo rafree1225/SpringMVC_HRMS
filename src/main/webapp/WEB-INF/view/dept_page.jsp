@@ -8,6 +8,31 @@
     <head>
         <!-- Head -->
         <%@include file="include/head.jspf"  %>
+
+        <style>
+            legend, 
+            .pure-table thead th {
+                font-weight: bold; /* 將字體設為粗體 */
+            }
+
+
+            .pure-form legend {
+                color: 	#000000; /* 黑色 */
+            }
+            .pure-form input {
+                color: #6C6C6C; /* 深灰色 */
+            }
+            .pure-table thead th {
+                background-color: #0072E3; /* 深藍色 */
+                color: 	#FFFFFF; /* 白色 */
+            }
+            .pure-table tbody td {
+                background-color: #FFFFFF; /* 白色 */
+                color:#000000; /* 黑色 */
+            }
+
+        </style>
+
     </head>
     <body style="padding: 10px">
 
@@ -21,72 +46,77 @@
             <div id="main">
                 <div class="header">
                     <h1>部門</h1>
-                    <h2>${ result }</h2>
+                    <h2>公司部門分類</h2>
                 </div>
-                <table class="pure-table" style="border: none;">
-                    <td valign="top">
-                        <!-- 表單 -->
-                        <form:form class="pure-form" 
-                                   modelAttribute="dept" 
-                                   method="post" 
-                                   action="${pageContext.request.contextPath}/mvc/dept/" >
-                            <fieldset>
-                                <legend>部門表單 ─ 新增、修改、刪除</legend>
-                                部門序號：<br/>
-                                <form:input path="id" readonly="true" /><p />
-                                部門名稱：<br/>
-                                <form:input path="name" placeholder="請輸入部門名稱" /><p />
-                                <form:errors path="name" style="color:red" /><p />
-                                操作狀態：<br/>
-                                <input type="text" id="_method" name="_method" readonly="true" value="${ _method }" /><p />
-                                <button type="sumbit" class="pure-button pure-button-primary">Submit</button>
-                            </fieldset>
-                        </form:form>
-                        
-                    </td>
-                    <td valign="top">
-                        <!-- 列表 -->
-                        <form class="pure-form">
-                            <fieldset>
-                                <legend>部門清單</legend>
-                                <table class="pure-table pure-table-bordered" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th>序號</th>
-                                            <th>名稱</th>
-                                            <th>人數</th>
-                                            <th>修改</th>
-                                            <th>刪除</th>
-                                        </tr>
-                                    </thead>
 
-                                    <tbody>
-                                        <c:forEach var="dept" items="${ dept_list }">
+                <div id="content-wrapper">
+                    <table class="pure-table" style="border: none;">
+                        <td valign="top">
+                            <!-- 表單 -->
+                            <form:form class="pure-form" 
+                                       modelAttribute="dept" 
+                                       method="post" 
+                                       action="${pageContext.request.contextPath}/mvc/dept/" >
+                                <fieldset>
+                                    <legend>部門表單 ─ 新增、修改、刪除</legend>
+                                    部門序號：<br/>
+                                    <form:input path="id" readonly="true" /><p />
+                                    部門名稱：<br/>
+                                    <form:input path="name" placeholder="請輸入部門名稱" /><p />
+                                    <form:errors path="name" style="color:red" /><p />
+                                    操作狀態：<br/>
+                                    <input type="text" id="_method" name="_method" readonly="true" value="${ _method }" /><p />
+                                    <button type="sumbit" class="pure-button pure-button-primary">Submit</button>
+                                </fieldset>
+                            </form:form>
+
+                        </td>
+                     
+                        <td valign="top">
+                            <!-- 列表 -->
+                            <form class="pure-form">
+                                <fieldset>
+                                    <legend>部門清單</legend>
+                                    <table class="pure-table pure-table-bordered" width="100%">
+                                        <thead>
                                             <tr>
-                                                <td>${ dept.id }</td>
-                                                <td>${ dept.name }</td>
-                                                <td>${ fn:length(dept.employees) }</td>
-                                                <td><a href="${pageContext.request.contextPath}/mvc/dept/${ dept.id }">修改</a></td>
-                                                <td><a href="${pageContext.request.contextPath}/mvc/dept/delete/${ dept.id }">刪除</a></td>
+                                                <th>序號</th>
+                                                <th>名稱</th>
+                                                <th>人數</th>
+                                                <th>修改</th>
+                                                <th>刪除</th>
                                             </tr>
-                                        </c:forEach>
-                                    </tbody>
-                                </table> 
-                            </fieldset>
-                        </form>
-                    </td>
-                    <td valign="top">
-                        <!-- 圖表 -->
-                        <form class="pure-form">
-                            <fieldset>
-                                <legend>部門圖表</legend>
-                                <%@include file="chart/dept_chart.jspf" %>
-                            </fieldset>
-                        </form>
-                    </td>
-                </table>   
+                                        </thead>
 
+                                        <tbody>
+                                            <c:forEach var="dept" items="${ dept_list }">
+                                                <tr>
+                                                    <td>${ dept.id }</td>
+                                                    <td>${ dept.name }</td>
+                                                    <td>${ fn:length(dept.employees) }</td>
+                                                    <td><a href="${pageContext.request.contextPath}/mvc/dept/${ dept.id }">修改</a></td>
+                                                    <td><a href="${pageContext.request.contextPath}/mvc/dept/delete/${ dept.id }">刪除</a></td>
+                                                </tr>
+                                            </c:forEach>
+                                        </tbody>
+                                    </table> 
+                                </fieldset>
+                            </form>
+                        </td>
+                        
+                          <td valign="top">
+                             圖表 
+                            <form class="pure-form">
+                                <fieldset>
+                                    <legend>部門圖表</legend>
+                                    <%@include file="chart/dept_chart.jspf" %>
+                                </fieldset>
+                            </form>
+                        </td>
+                      
+                    </table>   
 
+                </div>
             </div>
         </div>
 

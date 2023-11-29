@@ -16,7 +16,8 @@
         ]);
 
         var options = {
-            title: '社團人數'
+            title: '社團人數',
+           colors: ['#f3b49f']
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));

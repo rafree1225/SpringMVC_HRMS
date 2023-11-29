@@ -7,6 +7,9 @@
     <div class="pure-menu">
         
         <ul class="pure-menu-list">
+            <li class="pure-menu-item" id="homeLink">
+                <a href="${pageContext.request.contextPath}/index.html" class="pure-menu-link">首頁</a>
+            </li>
             <li class="pure-menu-item" id="deptLink">
                 <a href="${pageContext.request.contextPath}/mvc/dept/" class="pure-menu-link">部門</a>
             </li>

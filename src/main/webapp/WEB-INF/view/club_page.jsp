@@ -7,6 +7,30 @@
     <head>
         <!-- Head -->
         <%@include file="include/head.jspf"  %>
+
+        <style>
+            legend, 
+            .pure-table thead th {
+                font-weight: bold; /* 將字體設為粗體 */
+            }
+
+            .pure-form legend {
+                color: 	#000000; /* 黑色 */
+            }
+            .pure-form input {
+                color: #6C6C6C; /* 深灰色 */
+            }
+            .pure-table thead th {
+                background-color: #0072E3; /* 深藍色 */
+                color: 	#FFFFFF; /* 白色 */
+            }
+            .pure-table tbody td {
+                background-color: #FFFFFF; /* 白色 */
+                color:#000000; /* 黑色 */
+            }
+
+        </style>
+
     </head>
     <body style="padding: 10px">
 
@@ -20,7 +44,7 @@
             <div id="main">
                 <div class="header">
                     <h1>社團</h1>
-                    <h2></h2>
+                    <h2>公司社團分類</h2>
                 </div>
                 <table class="pure-table" style="border: none;">
                     <td valign="top">
@@ -64,7 +88,7 @@
                                                 <td>${ club.id }</td>
                                                 <td>${ club.name }</td>
                                                 <td>${ fn:length(club.employees) }</td>
-                                                  <td><a href="${pageContext.request.contextPath}/mvc/club/${ club.id }">修改</a></td>
+                                                <td><a href="${pageContext.request.contextPath}/mvc/club/${ club.id }">修改</a></td>
                                                 <td><a href="${pageContext.request.contextPath}/mvc/club/delete/${ club.id }">刪除</a></td>
                                             </tr>
                                         </c:forEach>
