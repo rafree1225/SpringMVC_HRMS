@@ -2,12 +2,13 @@
 
 
 系統各頁面截圖：
+![首頁](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/c34d8061-6486-4fcc-8878-3d237264d056)
 
-![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/2aba88d0-c010-47e8-aadc-ffea3c4cc45b)
+![部門](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/4b5784fe-cf29-4ca8-aa0b-247ae2f1b586)
 
-![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/834dd5aa-f64e-46fc-bc77-6004916acdb9)
+![社團](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/04e917a5-7e86-47fe-bede-85bb085d486a)
 
-![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/0c684f6b-8380-4400-a2aa-ab9b40512f3c)
+![員工](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/ee428db2-f908-4e67-bc68-beb6448ded47)
 
 
 ***********************************************************************************************************
@@ -23,8 +24,23 @@
 
 以SpringMVC概念實作一個簡易的員工人資管理系統，
 
-模擬人力資源人員使用公司內部的系統， 
+模擬人力資源人員使用公司內部的系統，
 
-可以查詢、新增、修改與刪除公司部門資料、社團資料、員工資料， 
+並做以下操作：
 
-並顯示相應資料的圖表(圓餅圖、長條圖、折線圖)
+在首頁：可以知道各頁面之功能，並前往。
+
+在部門頁面：可以個別設定公司部門的類別，
+並可以在該頁面新增、修改、刪除部門類別。
+另外也可以直接查看各個部門共有多少員工加入，與其圓餅圖。
+
+在社團頁面：可以個別設定公司社團的類別，
+並可以在該頁面新增、修改、刪除社團類別。
+另外也可以直接查看各個社團共有多少員工參加，與其直條圖。
+
+在員工頁面：可以個別設定每位員工的資料，
+包括姓名、薪資、部門、社團，
+並可以在該頁面新增、修改、刪除員工個人資料。
+
+另外也可以直接查看員工的薪資圖表(折線圖)。
+
