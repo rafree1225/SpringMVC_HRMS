@@ -2,7 +2,7 @@
 
 
 系統各頁面截圖：
-![首頁](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/c34d8061-6486-4fcc-8878-3d237264d056)
+![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/06beb580-5d7c-4d34-946a-01dff6eb27bf)
 
 
 ![image](https://github.com/rafree1225/SpringMVC_HRMS/assets/68884317/6e6394da-d342-4dd1-bf82-38280623b981)
