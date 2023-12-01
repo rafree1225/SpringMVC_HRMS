@@ -88,7 +88,7 @@ body {
 
 
 .subhead-box {
-    flex: 2;
+    flex: 3;
     padding: 30px;
     border-right: 1px solid #FFFFFF; /* 添加分隔線 */
     background-size: cover; /* 確保背景圖片覆蓋整個元素 */
@@ -234,5 +234,4 @@ body {
         width: 100%; /* 在小螢幕上，將寬度設為100% */
     }
 }
-
 
